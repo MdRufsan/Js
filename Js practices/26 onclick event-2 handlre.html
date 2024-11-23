@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On click event.</title>
+</head>
+<body>
+    <!--js er myMessage() call hbe onclick korle-->
+  <button onclick="myMessage1()">Click me-1</button>
+
+  <button onclick="myMessage2()">Click me-2</button>
+
+
+  <p id="para">I am a paragraph.</p>
+    
+
+
+    <script>
+        //button click korle ey function ta call hbe & paragraph tay message dekha jbe
+        /*function myMessage1(){
+            document.querySelector("#para").innerHTML="Your choosen button is button-1"
+        }
+
+        function myMessage2(){
+           document.querySelector("#para").innerHTML="Your choosen button is button-2"
+        }*/
+//ey vabeo kora jeto 1ta variable e rakhe
+        var myVar=document.querySelector("#para");
+        function myMessage1(){ 
+        myVar.innerHTML="Your choosen button is button-1"
+        }
+        function myMessage2(){ 
+        myVar.innerHTML="Your choosen button is button-2"
+        }
+        
+//click korle image dekhate cyle --->html e src="#" dibo pore js function document.quereySelector("#idName"){myVAr.src="image address";} dibo
+      
+
+    </script>
+</body>
+</html>

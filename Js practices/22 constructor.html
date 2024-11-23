@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object & constructor.</title>
+</head>
+<body>
+    
+
+    <script>
+        
+       function Student(name,age,cgpa,lang)//Student(parameters) -->constructor
+        {
+        this.name=name;
+        this.age=age;
+        this.cgpa=cgpa;
+        this.lang=lang;
+
+        //create function
+        this.display = function(){
+            document.write(this.name + "<br>");
+            document.write(this.age+ "<br>");
+            document.write(this.cgpa+ "<br>");
+            document.write(this.lang+ "<br>");
+
+        }
+
+       }
+       
+
+       var st1=new Student("Rufsan",23,3.86,["Bangla","English"]);//create object & assing value
+
+       var st2=new Student("Shanto",25,3.65,["Bangla","English","Hindi"]);//create object & assing value
+
+      /* document.write(st1.name);
+       document.write("<br>");
+       document.write(st2.lang); Eyvabe 1ta 1ta kore print kora jay. jodi constructor er vitor function/method  create na kora hoy*/
+       st1.display();//call function
+       st2.display();
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function 1.</title>
+</head>
+<body>
+    
+
+    <script>
+        //traditional Function
+
+        function display1(){document.write("This is a traditional Function");}
+        display1();//call
+        document.write("<br>");
+
+            
+     
+        
+
+        //arrow function
+        //function er 1ta name dibo = (parameter) =>{body}   1 line body er jonno {} na dileo hbe
+                const message1 = () => document.write("This is arrow function.");
+
+               message1();//call
+               document.write("<br>");
+
+
+        //traditional Function e value return
+
+             function display2(){
+                return "Traditional function return value";
+             }
+             document.write(display2());
+             document.write("<br>"); 
+
+             //arrow Function e value return
+             const message2 = () => "Arrow function return value";// return keyword use korle {} dite hobe.
+             document.write( message2());
+
+             document.write("<br>");
+
+
+             //parameterize in traditional function
+             
+             function add1(n1,n2){
+                return n1+n2;
+             }
+            document.write("Addition : "+ add1(10,20));
+
+            document.write("<br>");
+
+            //parameterize in Arrow function
+            //jodi 1 ta parameter thake tahole () lagbe na 0 ba 1 thika besi parameter thake () dewa lage
+            const add2 = (n1,n2) =>{
+                return n1+n2;
+            }
+            document.write("Addition : "+ add2(10,20));
+            document.write("<br>");
+            //1 line e code korle return & {} lage na arrow auto return kore r line besi hoile lage.
+            const add3 = (n1,n2) => n1+n2;
+                
+            
+            document.write("Addition : "+ add3(10,20));
+
+            
+    </script>
+</body>
+</html>

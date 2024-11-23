@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listener.</title>
+    <style>
+        .my-style{/*event listener er moddhome css ta add korbo*/
+            color:rgb(14, 90, 253);
+            font-size: 3rem;
+           
+        
+        
+        }
+        button{
+            color:blue ;
+            border-radius: 50px;
+            
+
+
+
+        }
+    </style>
+</head>
+<body>
+   <button>Click me</button>
+   <h1>I love Bangladesh</h1>
+
+
+
+
+<script>
+    
+document.querySelector("button").addEventListener("click",myFunction);
+//click korle function call hbe 
+
+
+
+function myFunction(){
+    alert("Okay!!");
+
+}
+//nicher vabeo anymous function create kore kora jay. j function er nam nai take anymous function bole.
+/*document.querySelector("button").addEventListener("click",function() {
+
+    alert("Hello");
+});*/
+
+
+var myVar=document.querySelector("h1");
+myVar.addEventListener("click",function(){//type of event is click, function
+
+    alert("This is a paragraph..");
+
+});
+var myVar=document.querySelector("h1");
+myVar.addEventListener("mouseover",function(){
+
+    myVar.classList.add("my-style");//css add kora
+
+});
+var myVar=document.querySelector("h1");
+myVar.addEventListener("mouseout",function(){
+
+    myVar.classList.remove("my-style");
+
+});
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+ 
+    
+    <script>
+        //Invokeable function
+
+        function display(){
+            document.write("Hello! This is a invokeable function.")
+        }
+        display();
+        
+
+        document.write("<br>");
+
+        //immediately function
+
+        (function display(message){
+            document.write(message);
+        })("This is a immediately function");//parameter set jta dibo sety print korbe. call kra lagbe na.
+
+        document.write("<br>");
+
+
+        // Function expressions
+
+        let display2 = function displayMessage()//function create kore ekta variable er moddhe rakha hoy
+        {
+            document.write("This is Function expression.")
+        };
+         display2();
+         
+         document.write("<br>");
+
+         let display3 = function displayMessage(msg)//function create kore rekta variable er moddhe rakha hoy.parameter pass kora hoise
+         {
+             document.write(msg)
+         };
+          display3("This is Function expression with parameter.");
+    </script>
+</body>
+</html>

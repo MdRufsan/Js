@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation.</title>
+</head>
+<body>
+    <a href="#">Visit Google</a>
+
+    <div class="myDiv" id="my-div" style="background-color: blanchedalmond;">
+        <h1>Hello!</h1>
+        <h1>GoodBye..</h1>
+
+    </div>
+    
+
+
+    <script>
+        //DOM--> document obj can access and manipulate HTML. DOM er maddhome HTML element ke find/get , change, add , delete kora hoy.
+
+        //DOM  get/find er--> methods: getElementById(id) && DOM poperties: innrHTML,
+
+        //change er-->methods:Element.setAttribute(attribute,value) & poperties:Element.innerHTML=new content ; Element.attribute=new value; Element.style.poperty=new style.
+        link=document.getElementsByTagName("a")[0];
+        link.innerHTML=" Visit with Shanto";//content change hbe
+        link.style.color="Green";//font color
+        link.style.fontSize="1.5rem";//font size 
+        link.style.textDecoration="none"//under line uthe jbe
+        link.href = "https://www.facebook.com/rj.shanto.395669?mibextid=ZbWKwL";//link address change.
+
+        var heading1= document.getElementsByTagName("h1")[0];
+
+        heading1.innerHTML="Hello! Everyone.";
+        heading1.style.color="red";
+
+        //create new HTML element
+        
+           var heading3=document.createElement("h2");//<h2> create korte cay
+           var text= document.createTextNode("New element text....");//text likhte cy
+           heading3.appendChild(text);//new element er sathe text ta add kora
+           
+           var m=document.getElementById("my-div");//div take access by id & keep it m variable
+           m.appendChild(heading3);//div tay new element add kora.appendChild() method dia niche element add hoy.
+
+
+           //remove element
+
+          /* var heading2=document.getElementsByTagName("h1")[1];//accsee heading2
+           m.removeChild(heading2);//heading2 remove.*/
+
+
+           var heading0=document.createElement("h1");//<h2> create korte cay
+            var text0= document.createTextNode("Text....");//text likhte cy
+            heading0.appendChild(text0);//new element er sathe text ta add kora
+
+            var heading1= document.getElementsByTagName("h1")[0];//find element
+
+            m.insertBefore(heading0,heading1);//div tay new element add kora.insertBefore() method dia upore element add hoy.ekhane heading1 er upore add kora hoische.
+
+
+
+ 
+        
+
+    </script>
+</body>
+</html>
