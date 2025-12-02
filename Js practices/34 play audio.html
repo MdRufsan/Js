@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play audio </title>
+    <style>
+        .btn{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(11, 235, 235);
+            
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">A</button>
+    <button class="btn">B</button>
+    <button class="btn">C</button>
+
+
+
+
+
+    <script>
+        for (var i=0;i<3;i++){
+        document.querySelectorAll(".btn")[i].addEventListener("click",function(){
+            var text= this.innerHTML; //button er vitorer text dekhar jonno
+            //alert(text);
+
+
+            switch(text){
+                case "A" : var audio = new Audio('apple.mp3');
+                           audio.play();
+                           break;
+                case "B" : var audio = new Audio('ball.mp3');
+                           audio.play();
+                           break; 
+                case "C" : var audio = new Audio('cat.mp3');
+                           audio.play(); 
+                           break;         
+
+
+            }
+
+        });
+    }
+    </script>
+    
+</body>
+</html>

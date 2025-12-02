@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keypress EventListener. </title>
+    <style>
+        .btn{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(11, 235, 235);
+            margin: 20px;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <button class="btn a">A</button>
+    <button class="btn b">B</button>
+    <button class="btn c">C</button>
+
+    <p>This is a demo.</p>
+
+
+
+
+
+    <script>
+        for (var i=0;i<3;i++){
+        document.querySelectorAll(".btn")[i].addEventListener("click",function(){
+            var text= this.innerHTML; //button er vitorer text dekhar jonno
+            //alert(text);
+
+            audioPlay(text);//call
+            
+        
+
+        });
+    }
+    //keypress korle audio bazbe
+    document.addEventListener("keypress",function(event){
+        var text= event.key;
+        audioPlay(text);
+
+    });
+    function  audioPlay(text){
+        switch(text){
+            case "a" : var audio = new Audio('apple.mp3');
+                       audio.play();
+                       break;
+            case "b" : var audio = new Audio('ball.mp3');
+                       audio.play();
+                       break; 
+            case "c" : var audio = new Audio('cat.mp3');
+                       audio.play(); 
+                       break;         
+
+
+        }
+
+    }
+
+    //j keypress korbo seta dekhabe
+    document.addEventListener("keypress",function(event){
+        var text= event.key;
+        document.querySelector("p").innerHTML="You have pressed----> "+"<b>"+ text ;
+    });
+   
+    </script>
+    
+</body>
+</html>
