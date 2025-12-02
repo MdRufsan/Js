@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+</head>
+<body>
+    <button onclick="prev()">Previous picture</button>
+    <img src="me.jpg" alt="sorryyy" height="700px" width="600px">
+    <button onclick="next()">Next Picture</button>
+</body>
+
+
+
+
+
+<script>
+    var photos=["me.jpg","me2.jpg","me3.jpg"];//picture gola arry te rakhbo
+
+    var imgTag=document.querySelector("img");//select image tag
+
+    var count=0;//count start from 0 no index   
+    function next(){
+        count++;
+        if(count >= photos.length){
+            count=0;
+            img.src=photos[count];
+        }else{
+        imgTag.src=photos[count];
+        }
+
+
+    }
+    function prev(){
+        count--;
+        if(count < 0 ){
+            count = photos.length - 1;
+            img.src=photos[count];
+        }else{
+        imgTag.src=photos[count];
+             }
+        
+    }
+</script>
+</html>

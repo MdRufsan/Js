@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">Visit my facebook</a>
+    <div id="mydiv" style="background-color: rgb(7, 235, 37);">
+        <h5>Delete korbo</h5>
+        <h1 class="" id="">This is heading 1</h1>
+        <h1 class="" id="">This is heading 1.2</h1>
+    </div>
+    
+    <Script>
+        var link=document.getElementsByTagName("a")[0];
+        link.innerHTML="Visit with Shanto!";
+        link.style.textDecoration="none";
+        link.style.color="red";
+        link.style.fontSize= "50px";
+        link.href="https://www.facebook.com/rj.shanto.395669?mibextid=ZbWKwL";
+        var heading1=document.getElementsByTagName("h1")[0];
+        heading1.innerHTML="Hello!";
+        //new element create
+        var heading3=document.createElement("h2");
+        //heading3 er text create
+        text=document.createTextNode("This is the new heading.");
+        //text ta heading3 er sathe add kora
+        heading3.appendChild(text);
+        //j khane element ta ase sy address ta agey access kora lagbe
+        var mydiv=document.getElementById("mydiv");
+        mydiv.appendChild(heading3);//appendChild deye niche element add hoy
+
+
+        //element delete
+        var delet= document.getElementsByTagName("h5")[0];
+        mydiv.removeChild(delet);
+
+
+        //appendChild deye niche element add hoy kinto modyfing er joon na
+
+        var headingGO=document.createElement("h6");
+        //heading3 er text create
+        textGO=document.createTextNode("Modify");
+        //text ta heading3 er sathe add kora
+        headingGO.appendChild(textGO);
+        //j khane element ta ase sy address ta agey access kora lagbe
+
+        //jar upore add korbo takee access korte hbe age
+        var etarupor= document.getElementsByTagName("h1")[0];
+        
+        mydiv.insertBefore(headingGO,etarupor);//upore element add hoy
+
+
+
+
+
+    </Script>
+</body>
+</html>

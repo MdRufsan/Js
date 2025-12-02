@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sideways</title>
+</head>
+<body>
+    <h1>Welcome to my page.</h1>
+    
+    <ol class="list">
+        <li class="a">Class A</li>
+        <li class="b">Class B</li>
+        <li class="c">Class C</li>
+        <li class="d">Class D</li>
+    </ol>
+</body>
+<script>
+    
+    //sideways --> 1.nextElementSibling, previousElementSibling 2. parentElement+child+index
+
+    
+    const classA = document.querySelector("li");
+    const classB = classA.nextElementSibling;
+    classB.style.color="green";
+
+
+    const classD = document.querySelectorAll("li")[3];
+    const classC = classD.previousElementSibling;
+    classC.style.color="red";
+
+
+    
+
+    
+
+
+
+</script>
+</html>

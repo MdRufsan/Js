@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upwards 1. parentElement</title>
+</head>
+<body>
+    <h1>Welcome to my page.</h1>
+    
+    <ol class="list">
+        <li class="a">Class A</li>
+        <li class="b">Class B</li>
+        <li class="c">Class C</li>
+    </ol>
+</body>
+<script>
+    //traversing-->selecting an element from other elements
+    //downwards(upor thika niche)-->1. quertSelector() / querySelectorAll() 2. children
+    //upwards -->1. parentElement
+    //sideways --> 1.nextElementSibling, previousElementSibling 2. parentElement+child+index
+
+    //upwards -->1. parentElement
+    const classA = document.querySelector("li");
+    const parent = classA.parentElement;
+
+    parent.style.color="red";
+
+
+
+
+</script>
+</html>
